@@ -1,16 +1,25 @@
-# critter_companion
+# CritterCompanion Flutter App
 
-A new Flutter project.
+"CritterCompanion" is a character-generating app. Using AI features it helps you generate fantasy creatures.
 
-## Getting Started
+## Credits
 
-This project is a starting point for a Flutter application.
+This pet project was created by [Daan Brocatus](https://github.com/Inn0) and [Ivans Mihailovs](https://github.com/ivansdivans). Their intention was to practice Flutter and AI APIs.
 
-A few resources to get you started if this is your first Flutter project:
+## Technologies used
+1. [Visual Studio Code](https://code.visualstudio.com/) - Integrated Development Environment
+2. [Dart](https://dart.dev/) - Programming language
+3. [Flutter](https://flutter.dev/) - UI SDK
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Collaboration rules
+1. Branching strategy - [Trunk-based workflow](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development); create short-lived branches and regularly integrate them into `main` branch
+2. Branch naming convention - `typeOfBranch/issueNumber-descriptiveBranchTitle` (examples: `feature/1-create-basic-navigation-panel`, `release/v0.1`, `bugfix/22-navigation-doesnt-work-in-landscape-mode`)
+4. Design patterns - [Model-View-ViewModel](https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm)
+5. Development conventions - keep `main` ready-to-deploy at all times; use [feature-flags](https://martinfowler.com/articles/feature-toggles.html) for potentially breaking changes
+6. Conventional commits - keep a clear and concise commit history using the [conventional commit format](https://www.conventionalcommits.org/en/v1.0.0/)
+7. Testing strategy - meaningful unit tests for each feature and bugfix
+8. Merging policy - mandatory PR, build and unit tests are green, 1 approval; no force pushes
+9. Feature tracking - each feature/bug is registered as an issue in Github and added to project (Kanban board)
+10. Feature estimation - issues were estimated using "T-shirt sizing" technique
+11. Feature prioritisation - issues are prioritised based on trafic lights system; focus on mvp related features, highest priority & smallest in size are implemented first
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
