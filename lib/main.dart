@@ -1,5 +1,9 @@
+import 'package:critter_companion/theme.dart';
 import 'package:critter_companion/util/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:critter_companion/pages/add_critter_page.dart';
+import 'package:critter_companion/pages/critter_list_page.dart';
+import 'package:critter_companion/widgets/bottom_navigation_widget.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: APP_NAME,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: critterCompanionTheme,
       home: const HomePage(),
     );
   }
@@ -27,8 +31,8 @@ class HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = const [
-    Center(child: Text(PAGE_ADD_CRITTER, style: TextStyle(fontSize: 24))),
-    Center(child: Text(PAGE_CRITTER_LIST, style: TextStyle(fontSize: 24))),
+    AddCritterPage(),
+    CritterListPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -42,19 +46,9 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: const Text(APP_NAME)),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationWidget(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            label: PAGE_ADD_CRITTER,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.format_list_bulleted),
-            label: PAGE_CRITTER_LIST,
-          ),
-        ],
       ),
     );
   }
