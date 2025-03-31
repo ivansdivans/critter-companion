@@ -44,8 +44,9 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(APP_NAME)),
-      body: _pages[_selectedIndex],
+      body: SafeArea(
+        child: _pages[_selectedIndex],
+      ),
       bottomNavigationBar: BottomNavigationWidget(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

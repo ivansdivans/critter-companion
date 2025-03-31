@@ -6,8 +6,14 @@ class CritterListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(PAGE_CRITTER_LIST, style: TextStyle(fontSize: 24)),
+    return Scaffold(
+      appBar: AppBar(title: const Text(PAGE_CRITTER_LIST)),
+      body: const Center(
+        child: Text(
+          PAGE_CRITTER_LIST,
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
     );
   }
 }
